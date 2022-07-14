@@ -8,14 +8,14 @@ public class numero1 {
 	        
 	int x, y, result;
 	        
-	System.out.println("Escolha um número: ");
+	System.out.println("Escolha um nÃºmero: ");
 	 x = sc.nextInt();
 	        
-	System.out.println("Escolha mais um número: ");
+	System.out.println("Escolha mais um nÃºmero: ");
 	 y = sc.nextInt();
 	        
 	    result = x - y;
-		System.out.println("A subtração entre esses numeros é: -> "+result);
+		System.out.println("A subtraÃ§Ã£o entre esses numeros Ã©: -> "+result);
 
 	        sc.close();
 	    }
