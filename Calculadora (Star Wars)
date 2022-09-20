@@ -1,0 +1,97 @@
+import java.util.Scanner;
+
+public class Main {
+
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		
+			System.out.println("Informe a operação que deseja: "
+					+ "\n1 - Soma"
+					+ "\n2 - Subtração"
+					+ "\n3 - Multiplicação"
+					+ "\n4 - Divisão"
+					+ "\n5 - Potenciação"
+					+ "\n6 - Raíz quadrada"
+					+ "\n7 - Porcentagem"
+					+ "\n--> ");
+			int operacao = sc.nextInt();
+			
+			switch (operacao) {
+			case 1:
+				int soma = 0;
+				System.out.print("Informe quantos números você deseja: ");
+				int qtd = sc.nextInt();
+				for(int i = 0; i < qtd; i++) {
+					System.out.println("Informe um número: ");
+					int num = sc.nextInt();
+					soma += num;
+				}
+				System.out.println("Soma: "+ soma);
+				break;
+			case 2:
+				System.out.println("Informe um número: ");
+				int num = sc.nextInt();
+				System.out.print("Informe quantos números você deseja: ");
+				qtd = sc.nextInt();
+				for(int i = 0; i < qtd; i++) {
+					System.out.println("Informe um número: ");
+					int num2 = sc.nextInt();
+					num -= num2;
+				}
+				System.out.println("Subtração: "+ num);
+				break;
+			case 3:
+				int vezes = 1;
+				System.out.print("Informe quantos números você deseja: ");
+				qtd = sc.nextInt();
+				for(int i = 0; i < qtd; i++) {
+					System.out.println("Informe um número: ");
+					num = sc.nextInt();
+					vezes = vezes * num;
+				}
+				System.out.println("Multiplicação: "+ vezes);
+				break;
+			case 4:
+				System.out.println("Informe um número: ");
+				double numero = sc.nextDouble();
+				System.out.print("Informe quantos números você deseja: ");
+				qtd = sc.nextInt();
+				for(int i = 0; i < qtd; i++) {
+					System.out.println("Informe um número: ");
+					int num2 = sc.nextInt();
+					numero = numero / num2;
+				}
+				System.out.println("Divisão: "+ numero);
+				break;
+			case 5:
+				double potencia = 0;
+				System.out.println("Informe a base: ");
+				num = sc.nextInt();
+				System.out.println("Informe o expoente: ");
+				int num2 = sc.nextInt();
+				potencia = Math.pow(num, num2);
+				
+				System.out.println("Potenciação: "+potencia);
+				break;
+			case 6:
+				double raiz = 0;
+				System.out.println("Informe um número: ");
+				num = sc.nextInt();
+				raiz = Math.sqrt(num);
+				
+				System.out.println("Raíz: "+raiz);
+				break;
+			case 7:
+				double porcentagem = 1;
+				System.out.println("Informe um número: ");
+				double total = sc.nextInt();
+				System.out.println("Informe a porcentagem que deseja: ");
+				double porcento = sc.nextInt();
+				porcentagem = (porcento / 100) * total;
+				System.out.println("Porcentagem: "+porcentagem);
+				break;
+			}
+			sc.close();
+	}
+
+}
